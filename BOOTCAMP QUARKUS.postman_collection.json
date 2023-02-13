@@ -474,6 +474,403 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "MS-QK-LOAN",
+			"item": [
+				{
+					"name": "listarLoan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1115/api/loan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1115",
+							"path": [
+								"api",
+								"loan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarLoanXId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/loan/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"loan",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "guardarLoan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"loanNumber\": \"1111\",\r\n    \"monthlyPaymentDate\": \"3333\",\r\n    \"expirationDate\": \"12-03-2014\",\r\n    \"quotaNumber\": 12,\r\n    \"validationCode\": \"3\",\r\n    \"initialBalance\": 2.2,\r\n    \"currentBalance\": 12.2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/loan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"loan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarLoan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1115/api/loan/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1115",
+							"path": [
+								"api",
+								"loan",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarLoan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"loanNumber\": \"2\",\r\n    \"monthlyPaymentDate\": \"3\",\r\n    \"expirationDate\": \"12-03-2014\",\r\n    \"quotaNumber\": 2,\r\n    \"validationCode\": \"2\",\r\n    \"initialBalance\": 22.2,\r\n    \"currentBalance\": 22.2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/loan/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"loan",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MS-QK-MOVEMENT",
+			"item": [
+				{
+					"name": "listarMovement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/api/movements",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"movements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarMovementXId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/api/movements/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"movements",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registrarMovementConsumoCreditCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTypeMovement\": 2,\r\n    \"descriptionMovement\": \"Consumo\",\r\n    \"dateMovement\": \"09-02-2023\",\r\n    \"totalMovement\": 50.00,\r\n    \"estateDelete\" : 1,\r\n    \"creditCard\":{\r\n        \"idCreditCard\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/movements",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"movements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarCreditCard",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/api/movements/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"movements",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarCreditCard",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTypeMovement\": 3,\r\n    \"descriptionMovement\": \"Consumo\",\r\n    \"dateMovement\": \"09-02-2023\",\r\n    \"totalMovement\": 80.0,\r\n    \"estateDelete\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/api/movements/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"movements",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registrarMovementPagoCrediCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTypeMovement\": 2,\r\n    \"descriptionMovement\": \"Pago\",\r\n    \"dateMovement\": \"09-02-2023\",\r\n    \"totalMovement\": 50.00,\r\n    \"estateDelete\" : 1,\r\n    \"creditCard\":{\r\n        \"idCreditCard\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/movements",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"movements"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MS-QK-CREDITCARD",
+			"item": [
+				{
+					"name": "listarCreditCard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/creditcard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"creditcard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarCrediCardXId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/api/creditcard/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"creditcard",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "guardarCreditCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"Tarjeta Debito\",\r\n    \"creditLimit\": 6000.0,\r\n    \"creditCardNumber\": \"4213550076842888\",\r\n    \"cvv\": 558,\r\n    \"expirationDate\": \"22-08-2026\",\r\n    \"closingDate\": \"10\",\r\n    \"lastOfPay\": \"05\",\r\n    \"client\":{\r\n        \"idClient\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/api/creditcard",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"creditcard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarCreditCard",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"Tarjeta Debito\",\r\n    \"creditLimit\": 9000.0,\r\n    \"creditCardNumber\": \"4213550076842999\",\r\n    \"cvv\": 559,\r\n    \"expirationDate\": \"22-08-2029\",\r\n    \"closingDate\": \"10\",\r\n    \"lastOfPay\": \"05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/api/creditcard/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"creditcard",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarCreditCard",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/api/movements/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"movements",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
